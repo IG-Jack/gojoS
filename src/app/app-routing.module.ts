@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tres',
+    loadChildren: () => import('./tres/tres.module').then( m => m.TresPageModule)
+  },
+  {
+    path: 'historia',
+    loadChildren: () => import('./historia/historia.module').then( m => m.HistoriaPageModule)
+  },
 ];
 
 @NgModule({
